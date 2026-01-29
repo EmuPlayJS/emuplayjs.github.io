@@ -287,5 +287,45 @@
             box.ondragover = () => box.setAttribute("drag", true);
             box.ondragleave = () => box.removeAttribute("drag");
         </script>
+        <script>
+    const currentPath = window.location.pathname;
+
+    const demoHtml = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Page</title>
+</head>
+<body>
+    <h1>Welcome to the Demo Page!</h1>
+    <p>This content is specifically for the <code>/demo</code> path.</p>
+    <p><a href="/">Go home</a></p>
+</body>
+</html>
+    `;
+
+    const defaultHtml = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Homepage</h1>
+    <p>This is the default content.</p>
+    <p><a href="/demo">Go to demo</a></p>
+</body>
+</html>
+    `;
+
+    if (currentPath === "/demo" || currentPath.endsWith("/demo/")) {
+        document.documentElement.innerHTML = demoHtml;
+    } else {
+        document.documentElement.innerHTML = defaultHtml;
+    }
+</script>
+
     </body>
 </html>
