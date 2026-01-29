@@ -213,15 +213,15 @@ If you want to help with localization, please check out the [localization](data/
 
 [License]: LICENSE
 [Issue]: https://github.com/ethanaobrien/emulatorjs/issues
-[patreon]: https://patreon.com/EmulatorJS
+[patreon]: https://patreon.com/EmuPlayJS
 
 <!-- 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮   Quicklinks   🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 --->
 
 [Configurator]: https://emulatorjs.org/editor
 [Contributors]: docs/contributors.md
-[Website]: https://emulatorjs.org/
-[Usage]: https://emulatorjs.org/docs/
-[Demo]: https://demo.emulatorjs.org/
+[Website]: https://emuplayjs.org/
+[Usage]: https://emuplayjs.org/docs/
+[Demo]: https://emuplayjs.github.io/
 
 
 <!-- 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮  Systems  🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 -->
