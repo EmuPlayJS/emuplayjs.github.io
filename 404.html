@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CDN Page Loader</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    const path = window.location.pathname.toLowerCase(); // get current URL path
+    const app = document.getElementById("app");
+
+    // Check if the URL contains /cdn
+    if (path.includes("/cdn")) {
+      if (path.includes("/page1")) {
+        app.innerHTML = "<h1>Page 1 Content</h1><p>This is HTML for page 1.</p>";
+      } else if (path.includes("/page2")) {
+        app.innerHTML = "<h1>Page 2 Content</h1><p>This is HTML for page 2.</p>";
+      } else {
+        app.innerHTML = "<h1>404</h1><p>Page not found in CDN.</p>";
+      }
+    } else {
+      // Default if /cdn is not in the URL
+      app.innerHTML = "<h1>Normal Page</h1><p>This page is not part of the CDN.</p>";
+    }
+  </script>
+</body>
+</html>
