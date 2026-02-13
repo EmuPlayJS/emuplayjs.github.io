@@ -41,9 +41,7 @@
     else if (path.includes("/cdn")) {
       document.title = "404: Page not found";
       app.innerHTML = `
-        <h2>404: Page not found</h2>
-        <p>Idk where you're trying to go, but it's not here....</p>
-        <a href="#" onclick="history.back(); return false;">Go Back?</a>
+        <style>body, html {background-color: #000;}h2, p {color: #fff;}a {color: #0000EE;text-decoration: underline;cursor: pointer;}a:visited {color: #800080;}</style><h2>404: Page not found</h2><p>Idk where you&#39;re trying to go, but its not here....</p><a href="#" onclick="history.back()">    Go Back?</a>
       `;
     }
 
