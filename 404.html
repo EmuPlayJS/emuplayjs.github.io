@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>CDN Loader</title>
+  <meta name="viewport" content="initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="cdn.emulatorjs.org/.theme/lighttpd-dir.css" />
 </head>
 <body>
   <div id="app"></div>
@@ -10,28 +13,51 @@
     const path = window.location.pathname.toLowerCase();
     const app = document.getElementById("app");
 
-    // Check if the URL contains /cdn
-    if (path.includes("/cdn")) {
-      // Case: URL ends with /cdn or /cdn/
-      if (path === "/cdn" || path === "/cdn/") {
-        app.innerHTML = "<title>Index of /</title><h1>CDN Main Page</h1><p>Welcome to the CDN main page!</p>";
-      } 
-      // Case: /cdn/page1
-      else if (path.includes("/cdn/page1")) {
-        app.innerHTML = "<h1>Page 1 Content</h1><p>This is HTML for page 1.</p>";
-      } 
-      // Case: /cdn/page2
-      else if (path.includes("/cdn/page2")) {
-        app.innerHTML = "<h1>Page 2 Content</h1><p>This is HTML for page 2.</p>";
-      } 
-      // Any other /cdn/* path
-      else {
-        app.innerHTML = "<h1>404</h1><p>CDN page not found.</p>";
-      }
+    // CDN main page if URL ends with /cdn or /cdn/
+    if (path === "/cdn" || path === "/cdn/") {
+      app.innerHTML = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Index of /</title>
+          <link rel="shortcut icon" type="image/x-icon" href="https://cdn.emulatorjs.org/latest/docs/favicon.ico" />
+        </head>
+        <body>
+          <iframe src="https://cdn.emulatorjs.org/.theme/HEADER.html" scrolling="no" style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
+          <h2>Index of /</h2>
+          <div class="list">
+            <table summary="Directory Listing" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr><th>Name</th><th>Last Modified</th><th>Size</th><th>Type</th></tr>
+              </thead>
+              <tbody>
+                <tr class="d"><td><a href="0.4.26/">0.4.26</a>/</td><td>2023-Dec-21 15:55:54</td><td>-</td><td>Directory</td></tr>
+                <tr class="d"><td><a href="3.1.5/">3.1.5</a>/</td><td>2023-Dec-21 16:27:23</td><td>-</td><td>Directory</td></tr>
+                <!-- Add all your other directories/files here -->
+              </tbody>
+            </table>
+          </div>
+          <iframe src="https://cdn.emulatorjs.org/.theme/README.html" scrolling="no" style="height:200px;width:100%;border:none;"></iframe>
+          <div class="foot"><b>EmulatorJS CDN</b> lighttpd</div>
+        </body>
+        </html>
+      `;
     } 
-    // If URL doesn’t contain /cdn at all
+    // Page 1
+    else if (path.includes("/cdn/page1")) {
+      app.innerHTML = "<h1>Page 1 Content</h1><p>This is HTML for page 1.</p>";
+    } 
+    // Page 2
+    else if (path.includes("/cdn/page2")) {
+      app.innerHTML = "<h1>Page 2 Content</h1><p>This is HTML for page 2.</p>";
+    } 
+    // Anything else under /cdn
+    else if (path.includes("/cdn")) {
+      app.innerHTML = "<h1>404</h1><p>CDN page not found.</p>";
+    } 
+    // Non-CDN paths
     else {
-      app.innerHTML = "<h1>Normal Page</h1><p>This page is not part of the CDN.</p>";
+      app.innerHTML = "<h1>404</h1><p>Page not found</p>";
     }
   </script>
 </body>
