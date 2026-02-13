@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CDN Loader</title>
   <meta name="viewport" content="initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="cdn.emulatorjs.org/.theme/lighttpd-dir.css" />
 </head>
@@ -16,31 +15,7 @@
     // CDN main page if URL ends with /cdn or /cdn/
     if (path === "/cdn" || path === "/cdn/") {
       app.innerHTML = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Index of /</title>
-          <link rel="shortcut icon" type="image/x-icon" href="https://cdn.emulatorjs.org/latest/docs/favicon.ico" />
-        </head>
-        <body>
-          <iframe src="https://cdn.emulatorjs.org/.theme/HEADER.html" scrolling="no" style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
-          <h2>Index of /</h2>
-          <div class="list">
-            <table summary="Directory Listing" cellpadding="0" cellspacing="0">
-              <thead>
-                <tr><th>Name</th><th>Last Modified</th><th>Size</th><th>Type</th></tr>
-              </thead>
-              <tbody>
-                <tr class="d"><td><a href="0.4.26/">0.4.26</a>/</td><td>2023-Dec-21 15:55:54</td><td>-</td><td>Directory</td></tr>
-                <tr class="d"><td><a href="3.1.5/">3.1.5</a>/</td><td>2023-Dec-21 16:27:23</td><td>-</td><td>Directory</td></tr>
-                <!-- Add all your other directories/files here -->
-              </tbody>
-            </table>
-          </div>
-          <iframe src="https://cdn.emulatorjs.org/.theme/README.html" scrolling="no" style="height:200px;width:100%;border:none;"></iframe>
-          <div class="foot"><b>EmulatorJS CDN</b> lighttpd</div>
-        </body>
-        </html>
+        <!DOCTYPE html><html><head><title>Index of /</title><meta name="viewport" content="initial-scale=1" /><link rel="stylesheet" type="text/css" href="https://cdn.emulatorjs.org/.theme/lighttpd-dir.css" /></head><body><link rel="shortcut icon" type="image/x-icon" href="https://cdn.emulatorjs.org/latest/docs/favicon.ico" /><iframe src="https://cdn.emulatorjs.org/.theme/HEADER.html" scrolling="no" onload="javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+&#34;px&#34;;}(this));" style="height:200px;width:100%;border:none;overflow:hidden;"></iframe><h2>Index of /</h2><div class="list"><table summary="Directory Listing" cellpadding="0" cellspacing="0"><thead><tr><th class="n">Name</th><th class="m">Last Modified</th><th class="s">Size</th><th class="t">Type</th></tr></thead><tbody><tr class="d"><td class="n"><a href="0.4.26/">              0.4.26</a>/</td><td class="m">2023-Dec-21 15:55:54</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="3.1.5/">              3.1.5</a>/</td><td class="m">2023-Dec-21 16:27:23</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.1/">              4.0.1</a>/</td><td class="m">2024-Jan-17 05:44:39</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.10/">              4.0.10</a>/</td><td class="m">2024-Aug-19 21:59:34</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.11/">              4.0.11</a>/</td><td class="m">2024-Aug-19 22:01:03</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.12/">              4.0.12</a>/</td><td class="m">2024-Aug-19 22:12:34</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.2/">              4.0.2</a>/</td><td class="m">2024-Jan-17 05:45:10</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.3/">              4.0.3</a>/</td><td class="m">2024-Jan-17 05:45:40</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.4/">              4.0.4</a>/</td><td class="m">2024-Jan-17 05:47:11</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.5/">              4.0.5</a>/</td><td class="m">2024-Aug-19 21:59:58</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.6/">              4.0.6</a>/</td><td class="m">2024-Jan-17 05:48:09</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.7/">              4.0.7</a>/</td><td class="m">2024-Jan-17 05:48:35</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.8/">              4.0.8</a>/</td><td class="m">2024-Jan-17 06:04:13</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.0.9/">              4.0.9</a>/</td><td class="m">2024-Mar-18 22:29:58</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.1.1/">              4.1.1</a>/</td><td class="m">2024-Aug-19 22:35:12</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.2.0/">              4.2.0</a>/</td><td class="m">2025-Mar-12 00:28:44</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.2.1/">              4.2.1</a>/</td><td class="m">2025-Mar-12 03:30:28</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.2.2/">              4.2.2</a>/</td><td class="m">2025-Jun-15 00:08:34</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="4.2.3/">              4.2.3</a>/</td><td class="m">2025-Jul-06 01:47:40</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="latest/">              latest</a>/</td><td class="m">2026-Feb-02 18:25:29</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="nightly/">              nightly</a>/</td><td class="m">2026-Feb-02 18:25:04</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="releases/">              releases</a>/</td><td class="m">2025-Jul-05 19:42:07</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr class="d"><td class="n"><a href="stable/">              stable</a>/</td><td class="m">2025-Jul-06 01:47:40</td><td class="s" data-value="-1">-</td><td class="t">Directory</td></tr><tr><td class="n"><a href="log.log">              log.log</a></td><td class="m">2026-Feb-02 18:10:22</td><td class="s" data-value="382385">373.4K</td><td class="t">application/octet-stream</td></tr><tr><td class="n"><a href="versions.json">              versions.json</a></td><td class="m">2025-Jul-06 01:52:08</td><td class="s" data-value="587">0.5K</td><td class="t">application/json</td></tr></tbody></table></div><iframe src="https://cdn.emulatorjs.org/.theme/README.html" scrolling="no" onload="javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+&#34;px&#34;;}(this));" style="height:200px;width:100%;border:none;"></iframe><div class="foot"><b>      EmulatorJS CDN</b>lighttpd</div></body></html>
       `;
     } 
     // Page 1
